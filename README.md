@@ -20,3 +20,4 @@
 
 [LangGraph for Code Generation](https://blog.langchain.dev/code-execution-with-langgraph/)
 
+[Code generation with RAG and self-correction](https://langchain-ai.github.io/langgraph/tutorials/code_assistant/langgraph_code_assistant/)
