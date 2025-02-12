@@ -9,3 +9,5 @@
 
 
 [Build a coding agent with Modal Sandboxes and LangGraph](https://modal.com/docs/examples/agent)
+
+[Creating a Clever Code Interpreter Tool With Langchain agents+Advanced Prompt Techniques](https://medium.com/latinxinai/creating-a-clever-code-interpreter-tool-with-langchain-agents-advanced-prompt-techniques-3d7b493cc580)
