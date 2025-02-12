@@ -1,4 +1,8 @@
-# code-interpreter
+# Code Interpreter
+
+[Code generation with RAG and self-correction](https://github.com/langchain-ai/langgraph/blob/main/docs/docs/tutorials/code_assistant/langgraph_code_assistant.ipynb)를 참조합니다.
+
+![image](https://github.com/user-attachments/assets/fc509eda-97ca-4994-8e47-6252764e4413)
 
 
 ## Reference
@@ -15,3 +19,4 @@
 [E2B - Give LangGraph code execution capabilities](https://e2b-blog.framer.website/blog/langgraph-with-code-interpreter-guide-with-code)
 
 [LangGraph for Code Generation](https://blog.langchain.dev/code-execution-with-langgraph/)
+
