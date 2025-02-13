@@ -23,3 +23,5 @@
 [Code generation with RAG and self-correction](https://langchain-ai.github.io/langgraph/tutorials/code_assistant/langgraph_code_assistant/)
 
 [Building a Self-Correcting Coding Assistant with LangChain and LangGraph: A Hands-on Guide](https://medium.com/@mauryaanoop3/building-a-self-correcting-coding-assistant-with-langchain-and-langgraph-a-hands-on-guide-3ea7424655be)
+
+[LangGraph + Function Calling + E2B Code Interpreter](https://github.com/e2b-dev/e2b-cookbook/blob/main/examples/langgraph-python/langgraph_code_interpreter.ipynb)
