@@ -4,6 +4,14 @@
 
 ![image](https://github.com/user-attachments/assets/fc509eda-97ca-4994-8e47-6252764e4413)
 
+## Codebox
+
+```python
+pip install codeboxapi ipython
+export CODEBOX_API_KEY=local
+```
+
+
 
 
 ## E2B
