@@ -109,11 +109,13 @@ docker run --rm -p3003:3003 -it rizaio/code-interpreter
 docker run -p3003:3003 -e RIZA_LICENSE_KEY=riza_license_xxx --rm -it rizaio/code-interpreter
 ```
 
+## Jupyter Kernel Gateway
 
+[Jupyter Kernel Gateway](https://github.com/jupyter-server/kernel_gateway)을 활용하여 직접 구축할 수 있습니다.
 
 ## Codebox
 
-명령어 입력 방식이 LLM에 맞지 않아서 제외합니다.
+[CodeBox](https://github.com/shroominic/codebox-api/tree/main)을 이용해 isolated/sandbox 환경을 사용할 수 있습니다. 그런데, 명령어 입력 방식이 LLM에 맞지 않아서 제외합니다.
 
 ```python
 pip install codeboxapi ipython matplotlib
@@ -137,9 +139,32 @@ result = codebox.exec("print(x)")
 print(result)
 ```
 
+## Python REPL
+
+LangChain 환경에서 [Python REPL](https://python.langchain.com/docs/integrations/tools/python/)을 이용할 수 있습니다.
+
+```python
+from langchain_core.tools import Tool
+from langchain_experimental.utilities import PythonREPL
+
+python_repl = PythonREPL()
+
+python_repl.run("print(1+1)")
+```
+
+## Chapyter
+
+[What is Chapyter](https://github.com/chapyter/chapyter/tree/main)와 같이 JupyterLab extension인 Chapyter는 code environment를 제공합니다. 
+
+
 ## LLama Index의 code interpreter
 
+[LlamaIndex - Code interpreter](https://docs.llamaindex.ai/en/stable/api_reference/tools/code_interpreter/)
+
+[LLM agent to write and execute python code in a sandboxed environment](https://github.com/run-llama/llama_index/issues/14049)
+
 [code_interpreter.ipynb](https://github.com/run-llama/llama_index/blob/main/llama-index-integrations/tools/llama-index-tools-code-interpreter/examples/code_interpreter.ipynb)을 참조합니다. tools에 등록된 tool들만 code interpreter를 쓸수 있는것으로 보여집니다.
+
 
 ```text
 pip install llama-index-tools-code-interpreter
