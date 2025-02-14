@@ -7,7 +7,7 @@
 ## Codebox
 
 ```python
-pip install codeboxapi ipython
+pip install codeboxapi ipython matplotlib
 export CODEBOX_API_KEY=local
 ```
 
