@@ -4,11 +4,137 @@
 
 ![image](https://github.com/user-attachments/assets/fc509eda-97ca-4994-8e47-6252764e4413)
 
+
+## Riza
+
+[Riza](https://docs.riza.io/introduction)를 참조해서 Code Interpreter를 이용할 수 있습니다.
+[Riza - dashboard](https://dashboard.riza.io/)에 접속해서 credential을 발급 받습니다.
+
+필요한 패키지를 등록하고 credential을 등록합니다. 
+
+```text
+npm install @riza-io/api
+export RIZA_API_KEY=riza_01JM27....
+```
+
+참고할 코드는 [Hello. World!](https://docs.riza.io/guides/hello-world)에서 확인합니다.
+
+```python
+CODE = """
+import sys
+import os
+
+print("stdin", sys.stdin.read())
+print("args", sys.argv)
+print("env", dict(os.environ))
+
+a = 1
+b = 2
+c = a+b
+print(f"c = {c}")
+"""
+
+셈플 코드는 아래와 같습니다.
+
+```python
+client = Riza()
+
+resp = client.command.exec(
+    language="python",
+    code=CODE,
+    stdin="Hello",
+    args=["one", "two"],
+    env={
+        "DEBUG": "true",
+    }
+)
+
+print(resp.stdout)
+```
+
+아래와 같이 실행할 수 있습니다.
+
+```python
+python3 riza2.py
+stdin Hello
+args ['python', '/src/code.py', 'one', 'two']
+env {'DEBUG': 'true'}
+c = 3
+```
+
+### LangChain에서 활용
+
+설치할 패키지는 아래와 같습니다.
+
+```text
+pip install --upgrade --quiet langchain-community rizaio
+```
+
+LangChain과 연결은 [Riza Code Interpreter](https://python.langchain.com/docs/integrations/tools/riza/)을 참조합니다.
+
+아래와 같이 tool로 등록합니다. 
+
+```python
+from langchain_community.tools.riza.command import ExecPython
+tools = [ExecPython()]
+```
+
+```python
+tools = [
+    {
+        "name": "execute_python",
+        "description": "Execute a Python script. The Python runtime does not have filesystem access, but does include the entire standard library. Make HTTP requests with the httpx or requests libraries. Read input from stdin and write output to stdout.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "The Python code to execute",
+                }
+            },
+            "required": ["code"],
+        },
+    },
+]
+```
+
+비용은 30초에 한번은 hobby로 무료입니다. 이후로는 $200에 400 hours의 비용을 부과합니다. 또한 [self host](https://docs.riza.io/enterprise/quickstart)로도 사용 가능합니다. 
+
+```text
+docker pull rizaio/code-interpreter
+docker run --rm -p3003:3003 -it rizaio/code-interpreter
+```
+
+```text
+docker run -p3003:3003 -e RIZA_LICENSE_KEY=riza_license_xxx --rm -it rizaio/code-interpreter
+```
+
+
+
 ## Codebox
+
+명령어 입력 방식이 LLM에 맞지 않아서 제외합니다.
 
 ```python
 pip install codeboxapi ipython matplotlib
 export CODEBOX_API_KEY=local
+```
+
+sample code는 아래와 같습니다.
+
+```python
+from codeboxapi import CodeBox
+
+# create a new codebox
+codebox = CodeBox()
+
+# run some code
+codebox.exec("a = 'Hello'")
+codebox.exec("b = 'World!'")
+codebox.exec("x = a + ', ' + b")
+result = codebox.exec("print(x)")
+
+print(result)
 ```
 
 ## LLama Index의 code interpreter
