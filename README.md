@@ -156,6 +156,9 @@ python_repl.run("print(1+1)")
 
 [What is Chapyter](https://github.com/chapyter/chapyter/tree/main)와 같이 JupyterLab extension인 Chapyter는 code environment를 제공합니다. 
 
+## ChatWTF
+
+[Adding a Python Sandbox w/ Docker to my ChatGPT Code Interpreter Clone](https://www.youtube.com/watch?v=imPktxcFT8w) 방법도 있는것으로 보여집니다.
 
 ## LLama Index의 code interpreter
 
