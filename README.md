@@ -11,7 +11,24 @@ pip install codeboxapi ipython matplotlib
 export CODEBOX_API_KEY=local
 ```
 
+## LLama Index의 code interpreter
 
+[code_interpreter.ipynb](https://github.com/run-llama/llama_index/blob/main/llama-index-integrations/tools/llama-index-tools-code-interpreter/examples/code_interpreter.ipynb)을 참조합니다. tools에 등록된 tool들만 code interpreter를 쓸수 있는것으로 보여집니다.
+
+```text
+pip install llama-index-tools-code-interpreter
+```
+
+```python
+from llama_index.tools.code_interpreter.base import CodeInterpreterToolSpec
+
+# Initialize the code interpreter tool
+code_interpreter = CodeInterpreterToolSpec()
+
+tools = code_spec.to_tool_list()
+# Create the Agent with our tools
+agent = OpenAIAgent.from_tools(tools, verbose=True)
+```
 
 
 ## E2B
