@@ -109,6 +109,20 @@ docker run --rm -p3003:3003 -it rizaio/code-interpreter
 docker run -p3003:3003 -e RIZA_LICENSE_KEY=riza_license_xxx --rm -it rizaio/code-interpreter
 ```
 
+## 같이 설치해야하는 패키지 
+
+버전이 맞지 않으면 실행이 되지 않습니다.
+
+[Dashboard](https://dashboard.riza.io/)의 Custom Runtime에서 requirements.txt를 아래와 같이 설정합니다. 설정 업데이트후에 배포까지 수분이 걸리고 이때 runtime_revision_id을 같이 변경하여야 합니다.
+
+```text
+pandas==2.2.3
+numpy==2.2.0
+matplotlib==3.10.0
+```
+
+
+
 ## Jupyter Kernel Gateway
 
 [Jupyter Kernel Gateway](https://github.com/jupyter-server/kernel_gateway)을 활용하여 직접 구축할 수 있습니다.
