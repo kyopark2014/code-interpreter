@@ -109,7 +109,7 @@ docker run --rm -p3003:3003 -it rizaio/code-interpreter
 docker run -p3003:3003 -e RIZA_LICENSE_KEY=riza_license_xxx --rm -it rizaio/code-interpreter
 ```
 
-## 같이 설치해야하는 패키지 
+### Custom Runtime
 
 버전이 맞지 않으면 실행이 되지 않습니다.
 
