@@ -109,6 +109,7 @@ docker run --rm -p3003:3003 -it rizaio/code-interpreter
 docker run -p3003:3003 -e RIZA_LICENSE_KEY=riza_license_xxx --rm -it rizaio/code-interpreter
 ```
 
+
 ### Riza로 생성한 예제
 
 아래와 같이 matplatlib을 위해 MPLCONFIGDIR을 설정하고 그래프 생성을 위한 코드를 포함합니다. plot은 based64로 encoding후에 stdout으로 출력되도록 해야 합니다. 
@@ -203,7 +204,24 @@ numpy==2.2.0
 matplotlib==3.10.0
 ```
 
+아래와 같이 생성할 수 있습니다.
 
+```python
+from rizaio import Riza
+
+riza = Riza()
+
+resp = riza.runtimes.create(
+    name="acme_corp_custom_runtime",
+    language="python",
+    manifest_file={
+        "name": "requirements.txt",
+        "contents": "pandas==1.5.3",
+    },
+)
+
+print(dict(resp))
+```
 
 ## Jupyter Kernel Gateway
 
