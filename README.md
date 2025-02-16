@@ -10,10 +10,9 @@
 [Riza](https://docs.riza.io/introduction)를 참조해서 Code Interpreter를 이용할 수 있습니다.
 [Riza - dashboard](https://dashboard.riza.io/)에 접속해서 credential을 발급 받습니다.
 
-필요한 패키지를 등록하고 credential을 등록합니다. 
+필요한 credential을 등록합니다. 
 
 ```text
-npm install @riza-io/api
 export RIZA_API_KEY=riza_01JM27....
 ```
 
