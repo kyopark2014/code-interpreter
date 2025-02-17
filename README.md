@@ -224,9 +224,11 @@ print(dict(resp))
 
 ## Jupyter Kernel Gateway
 
-[Jupyter Kernel Gateway](https://github.com/jupyter-server/kernel_gateway)을 활용하여 직접 구축할 수 있습니다.
+Jupyter Kernel Gateway를 사용하여 로컬 또는 클라우드 환경에서 Python 코드를 실행할 수 있습니다. [Jupyter Kernel Gateway](https://github.com/jupyter-server/kernel_gateway)을 활용하여 직접 구축할 수 있습니다.
 
 ## Codebox
+
+Code Interpreter API가 코드를 실행하기 위해 필요한 격리된 Python 실행 환경을 제공합니다. CodeBox는 Jupyter Kernel Gateway를 사용하여 로컬 또는 클라우드에서 코드를 실행하고 결과를 Code Interpreter API에 전달합니다. 
 
 [CodeBox](https://github.com/shroominic/codebox-api/tree/main)을 이용해 isolated/sandbox 환경을 사용할 수 있습니다. 그런데, 명령어 입력 방식이 LLM에 맞지 않아서 제외합니다.
 
