@@ -297,6 +297,9 @@ tools = code_spec.to_tool_list()
 agent = OpenAIAgent.from_tools(tools, verbose=True)
 ```
 
+## Bearly Code Interpreter 
+
+[Bearly Code Interpreter](https://python.langchain.com/docs/integrations/tools/bearly/)는 pdf/csv를 소스로 사용하여 code interpreter가 복잡한 질문을 할 수 있는것으로 보여집니다. 자세히 확인해보지는 못했지만 OpenAI 기반의 agent로서 code interpreter용도가 맞는지 정확하지 않습니다.
 
 ## E2B
 
